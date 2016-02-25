@@ -52,6 +52,7 @@ airmiles_tidy <- airmiles %>%
 airmiles_tidy
 ```
 
+
 ## AirPassengers
 
 ```{r AirPassengers}
@@ -168,3 +169,54 @@ mtcars_tidy <- mtcars %>%
 
 mtcars_tidy
 ```
+
+## Theoph
+``` {r Theoph}
+'Theoph already tidy'
+```
+## ToothGrowth
+``` {r ToothGrowth}
+'ToothGrowth already tidy'
+
+```
+
+
+## trees
+
+```{r trees}
+'trees already tidy'
+```
+
+##USArrests
+```{r USArrests}
+USArrests_tidy <- USArrests %>% mutate(State = rownames(.)) %>% tbl_df
+
+USArrests_tidy
+```
+
+##USJudgeRatings
+
+```{r USJudgeRatings}
+USJudgeRatings_tidy <- USJudgeRatings %>% mutate ( NAME = rownames(.)) %>% tbl_df
+
+USJudgeRatings_tidy
+
+```
+
+##USPersonalExpenditure
+```{r USPersonalExpenditure}
+
+USPersonalExpenditure_tidy <- USPersonalExpenditure %>% as.data.frame() %>% mutate (Expense = rownames(.)) %>% tbl_df 
+
+USPersonalExpenditure_tidy
+```
+
+## WorldPhones
+```{r WorldPhones} 
+WorldPhones_tidy <- WorldPhones %>% as.data.frame() %>% mutate (year = rownames(.)) %>% gather (continent, value, -year) %>% tbl_df()
+
+WorldPhones_tidy
+```
+
+
+
